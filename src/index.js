@@ -43,9 +43,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 exports.__esModule = true;
 var express_1 = __importDefault(require("express"));
 var FastExpress = /** @class */ (function () {
-    function FastExpress(port) {
+    function FastExpress(port, cb) {
         var _this = this;
         var app = express_1["default"]();
+        if (cb) {
+            cb(app);
+        }
         app.use(express_1["default"].json());
         app.use(function (req, res, next) { return __awaiter(_this, void 0, void 0, function () {
             var fName, _a, _b, _c, _d;
