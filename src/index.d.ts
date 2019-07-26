@@ -2,15 +2,17 @@
  * @author karakulov.web.dev@gmail.com
  */
 /// <reference types="express-serve-static-core" />
+import express from "express";
 interface FastExpressHandlerFunc {
-    (req: Express.Request): Promise<any>;
+    (req: express.Request): Promise<any>;
 }
 interface FastExpressAppMiddlewareCb {
-    (app: Express.Application): Promise<any>;
+    (app: express.Application): Promise<any>;
 }
-export default class FastExpress {
+declare class FastExpress {
     [key: string]: FastExpressHandlerFunc;
     constructor(port: number, cb?: FastExpressAppMiddlewareCb);
     default(req: Express.Request): Promise<string>;
 }
-export {};
+export default FastExpress;
+export { express, FastExpress };
