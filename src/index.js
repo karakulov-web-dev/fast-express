@@ -42,6 +42,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 exports.__esModule = true;
 var express_1 = __importDefault(require("express"));
+exports.express = express_1["default"];
 var FastExpress = /** @class */ (function () {
     function FastExpress(port, cb) {
         var _this = this;
@@ -82,4 +83,5 @@ var FastExpress = /** @class */ (function () {
     };
     return FastExpress;
 }());
+exports.FastExpress = FastExpress;
 exports["default"] = FastExpress;

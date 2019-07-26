@@ -5,14 +5,14 @@
 import express from "express";
 
 interface FastExpressHandlerFunc {
-  (req: Express.Request): Promise<any>;
+  (req: express.Request): Promise<any>;
 }
 
 interface FastExpressAppMiddlewareCb {
-  (app: Express.Application): Promise<any>;
+  (app: express.Application): Promise<any>;
 }
 
-export default class FastExpress {
+class FastExpress {
   [key: string]: FastExpressHandlerFunc;
   constructor(port: number, cb?: FastExpressAppMiddlewareCb) {
     let app = express();
@@ -34,3 +34,5 @@ export default class FastExpress {
     return "default";
   }
 }
+export default FastExpress;
+export { express, FastExpress };

@@ -1,6 +1,6 @@
 {
   "name": "@karakulov-web-dev/fast-express",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "fast-express",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
