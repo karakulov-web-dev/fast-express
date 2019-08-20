@@ -57,7 +57,6 @@ var FastExpress = /** @class */ (function () {
                 switch (_e.label) {
                     case 0:
                         fName = req.url.replace(/^\//, "").replace(/\?.*/, "");
-                        console.log(fName);
                         if (!!this.constructor.prototype.hasOwnProperty(fName)) return [3 /*break*/, 2];
                         _b = (_a = res).send;
                         return [4 /*yield*/, this["default"](req)];

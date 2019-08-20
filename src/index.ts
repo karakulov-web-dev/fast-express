@@ -22,7 +22,6 @@ class FastExpress {
     app.use(express.json());
     app.use(async (req, res, next) => {
       let fName = req.url.replace(/^\//, "").replace(/\?.*/, "");
-      console.log(fName);
       if (!this.constructor.prototype.hasOwnProperty(fName)) {
         res.send(await this.default(req));
         return;
